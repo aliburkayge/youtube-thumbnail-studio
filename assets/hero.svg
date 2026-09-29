@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">YouTube Thumbnail Studio</title>
+  <desc id="desc">Four colorful thumbnail concepts arranged beside a bold project title.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0c1026"/><stop offset="1" stop-color="#101a35"/></linearGradient>
+    <linearGradient id="a" x2="1" y2="1"><stop stop-color="#7c2cff"/><stop offset="1" stop-color="#ef4fa8"/></linearGradient>
+    <linearGradient id="b" x2="1" y2="1"><stop stop-color="#08b9c6"/><stop offset="1" stop-color="#6ee7ad"/></linearGradient>
+    <linearGradient id="c" x2="1" y2="1"><stop stop-color="#ff644b"/><stop offset="1" stop-color="#ffc057"/></linearGradient>
+    <linearGradient id="d" x2="1" y2="1"><stop stop-color="#3468ff"/><stop offset="1" stop-color="#8aa2ff"/></linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="55"/></filter>
+  </defs>
+  <rect width="1200" height="430" rx="28" fill="url(#bg)"/>
+  <circle cx="1010" cy="60" r="180" fill="#4d3bbb" opacity=".25" filter="url(#blur)"/>
+  <circle cx="160" cy="400" r="180" fill="#106a83" opacity=".2" filter="url(#blur)"/>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <rect x="66" y="75" width="160" height="30" rx="15" fill="#293052"/>
+    <text x="81" y="96" fill="#a7f3ef" font-size="13" font-weight="700" letter-spacing="1.7">NANO BANANA PRO</text>
+    <text x="64" y="167" fill="#fff" font-size="54" font-weight="800">YouTube</text>
+    <text x="64" y="226" fill="#fff" font-size="54" font-weight="800">Thumbnail <tspan fill="#76eee4">Studio</tspan></text>
+    <text x="68" y="269" fill="#bac8df" font-size="20">4 fikir. 1 güçlü kapak. Sonsuz yaratıcılık.</text>
+    <rect x="68" y="309" width="286" height="52" rx="14" fill="#fff"/>
+    <text x="89" y="342" fill="#151931" font-size="19" font-weight="700">gemini-3-pro-image  ↗</text>
+  </g>
+  <g transform="translate(628 55)" font-family="Segoe UI,Arial,sans-serif" font-weight="800" fill="white">
+    <g transform="rotate(-4 125 82)"><rect width="242" height="142" rx="18" fill="url(#a)"/><circle cx="177" cy="67" r="47" fill="#fff" opacity=".17"/><text x="17" y="39" font-size="19">A / HOOK</text><text x="17" y="111" font-size="32">WOW!</text></g>
+    <g transform="translate(263 15) rotate(4 125 82)"><rect width="242" height="142" rx="18" fill="url(#b)"/><circle cx="190" cy="108" r="62" fill="#fff" opacity=".16"/><text x="17" y="39" font-size="19">B / VALUE</text><text x="17" y="111" font-size="31">LEVEL UP</text></g>
+    <g transform="translate(11 166) rotate(3 125 82)"><rect width="242" height="142" rx="18" fill="url(#c)"/><circle cx="173" cy="91" r="52" fill="#fff" opacity=".16"/><text x="17" y="39" font-size="19">C / STORY</text><text x="17" y="111" font-size="31">BEFORE →</text></g>
+    <g transform="translate(269 176) rotate(-3 125 82)"><rect width="242" height="142" rx="18" fill="url(#d)"/><circle cx="188" cy="55" r="50" fill="#fff" opacity=".16"/><text x="17" y="39" font-size="19">D / IMPACT</text><text x="17" y="111" font-size="31">NEXT BIG</text></g>
+  </g>
+</svg>

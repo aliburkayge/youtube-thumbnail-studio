@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+workspace/
+youtube-thumbnails/
+.claude/skills/youtube-thumbnail/assets/headshots/*
+!.claude/skills/youtube-thumbnail/assets/headshots/README.md

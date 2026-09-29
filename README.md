@@ -4,7 +4,7 @@
 
 <br><br>
 
-<img src="assets/hero.svg" alt="@albrkyai portresiyle YouTube Thumbnail Studio kapak görseli" width="100%">
+<img src="assets/hero-portrait.svg" alt="@albrkyai portresiyle YouTube Thumbnail Studio kapak görseli" width="100%">
 
 # YouTube Thumbnail Studio
 
@@ -82,7 +82,7 @@ python .claude/skills/youtube-thumbnail/scripts/combine_thumbnails.py --images a
     ├── search_examples.py
     └── combine_thumbnails.py
 assets/
-├── hero.svg
+├── hero-portrait.svg
 ├── portrait.jpg
 ├── demo.gif
 └── make_demo_gif.py
@@ -91,3 +91,4 @@ assets/
 ## Gizlilik
 
 API anahtarlarını `.env` içinde tut. Üretimde kullandığın portreleri ve oluşturulan görselleri depoya ekleme; `.gitignore` bunları varsayılan olarak dışarıda bırakır. Tanıtım kapağındaki `assets/portrait.jpg` ise bu depo için paylaşılan herkese açık görseldir. Gemini'ye gönderdiğin fotoğraf ve referans görselleri, kullandığın API'nin koşullarına tabidir.
+

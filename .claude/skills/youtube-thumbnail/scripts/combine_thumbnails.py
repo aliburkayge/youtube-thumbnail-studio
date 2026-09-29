@@ -38,13 +38,23 @@ def add_label(img, label):
     draw = ImageDraw.Draw(img)
     font_size = max(28, img.width // 20)
 
-    try:
-        font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", font_size)
-    except (OSError, IOError):
+    font = None
+    for font_path in (
+        "C:/Windows/Fonts/segoeui.ttf",
+        "/System/Library/Fonts/Supplemental/Arial Unicode.ttf",
+        "/System/Library/Fonts/Helvetica.ttc",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "DejaVuSans.ttf",
+    ):
         try:
-            font = ImageFont.truetype("/System/Library/Fonts/SFNSMono.ttf", font_size)
-        except (OSError, IOError):
-            font = ImageFont.load_default()
+            candidate = ImageFont.truetype(font_path, font_size)
+            if all(candidate.getmask(char).getbbox() for char in set(label) if not char.isspace()):
+                font = candidate
+                break
+        except (OSError, UnicodeError):
+            continue
+    if font is None:
+        font = ImageFont.load_default(font_size)
 
     padding = 12
     bbox = draw.textbbox((0, 0), label, font=font)
@@ -68,6 +78,10 @@ def add_label(img, label):
 
 
 def main():
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="backslashreplace")
+
     args = parse_args()
 
     images = []

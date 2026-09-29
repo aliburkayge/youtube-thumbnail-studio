@@ -24,6 +24,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 import urllib.request
 import urllib.error
 import urllib.parse
@@ -40,11 +41,11 @@ except ImportError:
 
 def load_dotenv():
     """Load .env file from project root if it exists."""
-    env_path = Path(__file__).resolve().parents[3] / ".env"
+    env_path = Path(__file__).resolve().parents[4] / ".env"
     if not env_path.exists():
         env_path = Path.cwd() / ".env"
     if env_path.exists():
-        with open(env_path) as f:
+        with open(env_path, encoding="utf-8-sig") as f:
             for line in f:
                 line = line.strip()
                 if line and not line.startswith("#") and "=" in line:
@@ -123,14 +124,20 @@ def download_thumbnail(url, output_path):
 
 
 def slugify(text, max_len=40):
-    """Convert text to a filename-safe slug."""
+    """Convert text to an ASCII filename while preserving Turkish words."""
+    text = text.translate(str.maketrans({"İ": "I", "ı": "i"}))
+    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii")
     text = text.lower()
     text = re.sub(r"[^a-z0-9\s-]", "", text)
     text = re.sub(r"[\s-]+", "-", text).strip("-")
-    return text[:max_len]
+    return text[:max_len].strip("-") or "thumbnail"
 
 
 def main():
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="backslashreplace")
+
     parser = argparse.ArgumentParser(description="Search YouTube for high-performing thumbnail examples")
     parser.add_argument("--query", required=True, help="Search query (video topic)")
     parser.add_argument("--top", type=int, default=5, help="Number of top thumbnails to download (default: 5)")

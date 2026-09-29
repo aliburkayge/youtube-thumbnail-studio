@@ -105,12 +105,12 @@ def resize_if_needed(img, max_edge=2048):
 
 def load_dotenv():
     """Load .env file from project root if it exists."""
-    env_path = Path(__file__).resolve().parents[3] / ".env"
+    env_path = Path(__file__).resolve().parents[4] / ".env"
     if not env_path.exists():
         # Try current working directory
         env_path = Path.cwd() / ".env"
     if env_path.exists():
-        with open(env_path) as f:
+        with open(env_path, encoding="utf-8-sig") as f:
             for line in f:
                 line = line.strip()
                 if line and not line.startswith("#") and "=" in line:
@@ -119,6 +119,10 @@ def load_dotenv():
 
 
 def main():
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="backslashreplace")
+
     args = parse_args()
 
     load_dotenv()
@@ -147,7 +151,7 @@ def main():
     if not args.no_style:
         style_path = Path(__file__).resolve().parent.parent / "brand-style.md"
         if style_path.exists():
-            style_text = style_path.read_text().strip()
+            style_text = style_path.read_text(encoding="utf-8-sig").strip()
             prompt += (
                 "\n\nBRAND STYLE GUIDE (follow these rules):\n"
                 f"{style_text}"

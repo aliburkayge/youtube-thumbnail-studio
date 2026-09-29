@@ -27,6 +27,10 @@
 
 **Model:** `gemini-3-pro-image` (Nano Banana Pro). Google'ın [model sayfasında](https://ai.google.dev/gemini-api/docs/models/gemini-3-pro-image) belirtilen kalıcı model kodu kullanılır.
 
+### Türkçe karakterler
+
+Türkçe promptlar, arama sorguları, `.env` ve isteğe bağlı `brand-style.md` UTF-8 olarak işlenir. `--labels` içinde `Ç, Ğ, İ, I, Ö, Ş, Ü, ı` kullanılabilir. Arama sonuçlarının dosya adları güvenli ASCII karşılıklarına çevrilir (`Türkçe Başlık` → `turkce-baslik`). Gemini'nin **görselin içine yazdığı** Türkçe metni yine de kontrol et: Google'ın [en iyi performans dilleri listesinde](https://ai.google.dev/gemini-api/docs/image-generation#limitations) Türkçe yer almıyor.
+
 ## Hızlı başlangıç
 
 1. Python 3.10+ kur ve bağımlılıkları yükle:

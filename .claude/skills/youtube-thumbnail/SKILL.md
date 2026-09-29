@@ -436,6 +436,8 @@ Run through this after every generation:
 
 ## Troubleshooting
 
+For Turkish titles and thumbnail copy, preserve the user's exact characters (`Ç Ğ İ I Ö Ş Ü ç ğ ı i ö ş ü`) in prompts. Ask Gemini to render the quoted text exactly, then inspect the generated image for missing or incorrect diacritics. If the lettering is wrong, add the text in post-production rather than treating the generated spelling as final.
+
 | Issue | Fix |
 |-------|-----|
 | "Could not process image" when reading downloaded reference | The downloaded file is HTML, not an image — the site blocked hotlinking. Run `file <path>` to confirm. Delete it and download from a different source (Wikipedia, GitHub raw, or official press kit). |

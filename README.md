@@ -91,4 +91,3 @@ assets/
 ## Gizlilik
 
 API anahtarlarını `.env` içinde tut. Üretimde kullandığın portreleri ve oluşturulan görselleri depoya ekleme; `.gitignore` bunları varsayılan olarak dışarıda bırakır. Tanıtım kapağındaki `assets/portrait.jpg` ise bu depo için paylaşılan herkese açık görseldir. Gemini'ye gönderdiğin fotoğraf ve referans görselleri, kullandığın API'nin koşullarına tabidir.
-

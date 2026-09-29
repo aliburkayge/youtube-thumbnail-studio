@@ -58,8 +58,10 @@ def frame(index):
     image = gradient((11, 17, 39), (19, 30, 59), W, H)
     d = ImageDraw.Draw(image)
     d.rounded_rectangle((24, 22, W - 24, H - 20), radius=28, outline="#344366", width=2)
-    d.rounded_rectangle((47, 44, 220, 76), radius=15, fill="#253450")
-    d.text((61, 51), "NANO BANANA PRO", font=font(15, True), fill="#82ece5")
+    d.rounded_rectangle((47, 44, 221, 76), radius=15, fill="#263652")
+    d.text((62, 51), "@albrkyai", font=font(17, True), fill="#f3ffff")
+    d.rounded_rectangle((232, 44, 407, 76), radius=15, fill="#253450")
+    d.text((247, 51), "NANO BANANA PRO", font=font(15, True), fill="#82ece5")
     d.text((48, 101), "ONE IDEA. FOUR DIRECTIONS.", font=font(38, True), fill="white")
     d.text((49, 154), "A clearer choice for your next YouTube cover", font=font(20), fill="#aabbd6")
 
@@ -76,7 +78,7 @@ def frame(index):
         status = "03  /  PICK YOUR DIRECTION"
     d.rounded_rectangle((48, 447, 911, 490), radius=14, fill="#1b2845")
     d.text((67, 457), status, font=font(18, True), fill="#b5eee8")
-    d.text((645, 457), "gemini-3-pro-image  ·  @albrkyai", font=font(14), fill="#a6b6d3")
+    d.text((724, 457), "gemini-3-pro-image", font=font(14), fill="#a6b6d3")
     if index >= 15:
         active = (index - 15) // 2 % 4
         x, y, w, h = boxes[active]

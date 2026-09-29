@@ -1,12 +1,16 @@
 <div align="center">
 
-<img src="assets/hero.svg" alt="YouTube Thumbnail Studio" width="100%">
+<a href="https://instagram.com/albrkyai/"><strong>↗ INSTAGRAM / @albrkyai</strong></a>
+
+<br><br>
+
+<img src="assets/hero.svg" alt="@albrkyai portresiyle YouTube Thumbnail Studio kapak görseli" width="100%">
 
 # YouTube Thumbnail Studio
 
 **Tek fikirden dört ayrı kapak konsepti.** Gemini 3 Pro Image ile üret, yan yana karşılaştır, seçtiğin yönü geliştir.
 
-[Kurulum](#hızlı-başlangıç) · [Nasıl çalışır?](#nasıl-çalışır) · [Instagram](https://instagram.com/albrkyai/)
+[Kurulum](#hızlı-başlangıç) · [Nasıl çalışır?](#nasıl-çalışır)
 
 </div>
 
@@ -79,18 +83,11 @@ python .claude/skills/youtube-thumbnail/scripts/combine_thumbnails.py --images a
     └── combine_thumbnails.py
 assets/
 ├── hero.svg
+├── portrait.jpg
 ├── demo.gif
 └── make_demo_gif.py
 ```
 
 ## Gizlilik
 
-API anahtarlarını `.env` içinde tut. Portrelerini ve oluşturulan görselleri depoya ekleme; `.gitignore` bunları varsayılan olarak dışarıda bırakır. Gemini'ye gönderdiğin fotoğraf ve referans görselleri, kullandığın API'nin koşullarına tabidir.
-
----
-
-<div align="center">
-
-Hazırlayan [@albrkyai](https://instagram.com/albrkyai/) · [Instagram'da takip et](https://instagram.com/albrkyai/)
-
-</div>
+API anahtarlarını `.env` içinde tut. Üretimde kullandığın portreleri ve oluşturulan görselleri depoya ekleme; `.gitignore` bunları varsayılan olarak dışarıda bırakır. Tanıtım kapağındaki `assets/portrait.jpg` ise bu depo için paylaşılan herkese açık görseldir. Gemini'ye gönderdiğin fotoğraf ve referans görselleri, kullandığın API'nin koşullarına tabidir.

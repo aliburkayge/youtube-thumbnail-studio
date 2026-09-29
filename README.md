@@ -79,7 +79,8 @@ python .claude/skills/youtube-thumbnail/scripts/combine_thumbnails.py --images a
     └── combine_thumbnails.py
 assets/
 ├── hero.svg
-└── demo.gif
+├── demo.gif
+└── make_demo_gif.py
 ```
 
 ## Gizlilik

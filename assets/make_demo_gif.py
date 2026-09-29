@@ -76,7 +76,7 @@ def frame(index):
         status = "03  /  PICK YOUR DIRECTION"
     d.rounded_rectangle((48, 447, 911, 490), radius=14, fill="#1b2845")
     d.text((67, 457), status, font=font(18, True), fill="#b5eee8")
-    d.text((724, 457), "gemini-3-pro-image", font=font(14), fill="#a6b6d3")
+    d.text((645, 457), "gemini-3-pro-image  ·  @albrkyai", font=font(14), fill="#a6b6d3")
     if index >= 15:
         active = (index - 15) // 2 % 4
         x, y, w, h = boxes[active]
